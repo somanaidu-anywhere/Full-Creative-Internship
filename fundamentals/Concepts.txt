@@ -1,0 +1,30 @@
+Class:
+
+A class is a template or a blueprint to create objects. It contains states called variables and behaviors called methods.
+If we consider a Vehicle as an example, Vehicle has states or attributes such as number of wheels, speed, and type of fuel etc., Also has behaviors like start, break and park.
+
+Object:
+
+An object is an instance of class. It is an entity created by following the rules mentioned in the class.
+For our example Vehicle class, We can create an object called car which has its own data for variables and methods.
+The variables store data and methods performs a dedicated task by executing its statements.
+
+Class modifiers:
+
+ A class can be declared as public or default. 
+ A java file can have any number of classes but with only one public class which has same name as file and contain main method.
+ A can be declared by using class keyword and preceeding with access modifier.
+ Declaring a class without its modifier is default modifier.
+
+ Class member modifiers:
+
+ There are 4 kinds of data access modifiers.
+ 1. public
+ 2. protected
+ 3. default
+ 4. private
+
+ public members can be accessed within the class, within the package and out of the package. It ha wider scope.
+ protected members can be accessed within the class, within the package and out of the package through sub classes only.
+ default members can be accessed within the class and within the package. Its has package level scope.
+ private members can be accessed within the class only.
