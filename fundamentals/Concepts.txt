@@ -28,3 +28,17 @@ Class modifiers:
  protected members can be accessed within the class, within the package and out of the package through sub classes only.
  default members can be accessed within the class and within the package. Its has package level scope.
  private members can be accessed within the class only.
+
+ Abstract:
+
+ Abstraction is the process of hiding unnecessary details and show needed information.
+ Abstract class is a class which is declared with Abstract keyword.
+ An abstract class cannot be instantiated.
+ Abstract class can have abstract and non abstract methods.
+ Abstract method is declared with abstract keyword and does not contain implementation.
+ The sub class of abstract class must implement all the abstract methods from the super class.
+ Example:
+ startVehicle():
+    Various Vehicles has their own way of starting them. 
+    A bike can be started with a kick.
+    A car can be started with a key.
