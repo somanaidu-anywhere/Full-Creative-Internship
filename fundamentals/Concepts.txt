@@ -42,3 +42,15 @@ Class modifiers:
     Various Vehicles has their own way of starting them. 
     A bike can be started with a kick.
     A car can be started with a key.
+
+Interfaces:
+ An interface is a fully abstract class in java.
+ It is used to achieve abstraction.
+ We can't create object for an interface.
+ Interface contains methods without implementation.
+ It can have static and default methods.
+ Defualt methods can be declared with a default keyword.
+ Interface can extend multiple interfaces to achieve multiple inheritance.
+ One class can implement multiple interfaces.
+ The class which implements an interface should implement all the unimplemented methods of the interface.
+ All the methods in interface by default public. It can have private methods also.
