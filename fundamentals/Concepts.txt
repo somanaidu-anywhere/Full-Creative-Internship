@@ -1,7 +1,8 @@
 Class:
 
 A class is a template or a blueprint to create objects. It contains states called variables and behaviors called methods.
-If we consider a Vehicle as an example, Vehicle has states or attributes such as number of wheels, speed, and type of fuel etc., Also has behaviors like start, break and park.
+If we consider a Vehicle as an example, Vehicle has states or attributes such as number of wheels, speed, and type of fuel etc., 
+Also has behaviors like start, break and park.
 
 Object:
 
@@ -44,6 +45,7 @@ Class modifiers:
     A car can be started with a key.
 
 Interfaces:
+
  An interface is a fully abstract class in java.
  It is used to achieve abstraction.
  We can't create object for an interface.
@@ -54,3 +56,11 @@ Interfaces:
  One class can implement multiple interfaces.
  The class which implements an interface should implement all the unimplemented methods of the interface.
  All the methods in interface by default public. It can have private methods also.
+
+ Methods with variable length argument:
+
+ A method can accept different number of parameters of same type.
+ Example:   add(int ...elements)
+ elements can represented as array of integer type.
+ The variable argument must be the last parameter of the method.
+ A method can only contain atmost one variable argument and can have any number of parameters.
