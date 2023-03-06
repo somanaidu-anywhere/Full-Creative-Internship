@@ -64,3 +64,19 @@ Interfaces:
  elements can represented as array of integer type.
  The variable argument must be the last parameter of the method.
  A method can only contain atmost one variable argument and can have any number of parameters.
+
+ Constructor:
+
+ A constructor is a method which has the same name as the Class in which it is declared.
+ A constructor can't have a return type.
+ Constructor is automatically executed when object is created with that constructor.
+ The constructor of that class can be called with this keyword and appropriate parameters.
+ The super class constructor from the subclass can be called with super keyword and required parameters.
+ When we don't declare any constructor for a class Java compiler automatically creates a default constructor without parameters.
+ Default constructor initiates default values for the instance variables.
+
+Constructor overloading:
+
+ Constructors with different arguments is called Constructor overloading.
+ It is same as method overloading except that Constructors won't have return type.
+ Constructor can be overloaded if number of arguments or the type of arguments are different with others.
