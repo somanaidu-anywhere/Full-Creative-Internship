@@ -138,8 +138,7 @@ Local variables:
 
 static keyword:
  It is a keyword which is used to share the same variable or method of a given class.
- It defines that the members belong to classes rather than objects.
- It improves code reusability.
+
 static variable:
  static is used for a variable that is same for every instance of a class.
  It reduces memory by sharing same variable for its objects.

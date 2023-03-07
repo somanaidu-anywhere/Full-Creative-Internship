@@ -1,4 +1,4 @@
-package interfaces;
+package Month1_week1.interfaces;
 
 public interface Shape {
 	void draw();
@@ -6,5 +6,4 @@ public interface Shape {
 	{
 		System.out.println("It is a shape.");
 	}
-
 }

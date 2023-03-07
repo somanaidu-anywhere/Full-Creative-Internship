@@ -1,4 +1,4 @@
-package classesandmodifiers;
+package Month1_week1.classesandmodifiers;
 
 public class Vehicle {
 	int noOfWheels;

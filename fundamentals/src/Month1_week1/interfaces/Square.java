@@ -1,4 +1,4 @@
-package interfaces;
+package Month1_week1.interfaces;
 
 public class Square implements TwoDshape {
 

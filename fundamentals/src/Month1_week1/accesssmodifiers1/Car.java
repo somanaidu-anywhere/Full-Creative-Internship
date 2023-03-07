@@ -1,6 +1,6 @@
-package accesssmodifiers1;
+package Month1_week1.accesssmodifiers1;
 
-import accesssmodifiers.Vehicle;
+import Month1_week1.accesssmodifiers.Vehicle;
 
 public class Car extends Vehicle{
 	public Car()

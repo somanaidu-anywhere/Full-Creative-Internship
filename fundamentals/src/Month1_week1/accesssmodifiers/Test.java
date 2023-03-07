@@ -1,4 +1,4 @@
-package accesssmodifiers;
+package Month1_week1.accesssmodifiers;
 
 public class Test {
 	public static void main(String[] args) {
