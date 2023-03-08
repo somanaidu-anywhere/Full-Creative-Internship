@@ -138,7 +138,8 @@ Local variables:
 
 static keyword:
  It is a keyword which is used to share the same variable or method of a given class.
-
+ It defines that the members belong to classes rather than objects.
+ It improves code reusability.
 static variable:
  static is used for a variable that is same for every instance of a class.
  It reduces memory by sharing same variable for its objects.
@@ -158,3 +159,61 @@ static class:
 static block:
  The logic to be executed during the class loading before executing the main() method can be in a static block. 
  Static blocks are mainly used to initialize the static variables.
+ These blocks are executed only once when class loaders load the class.
+
+Instance variables:
+
+ These are non-static variables of a class.
+ These variables can store different values from object to object.
+ These variables coupled with objects.
+
+Class Variables:
+
+ These are static varialbes of a class.
+ These variables share same memory for all the objects of the class.
+ Class variables belongs to classes rather than objects.
+ Generally used to store global data of all the objects.
+ These variables can be directly accessed with class name.
+
+Local variables:
+
+ Local variables are declared in methods.
+ The scope of a local variable is within the method where it is declared.
+ Generally these variables store temporary states of the object.
+
+Primitive Type Casting:
+
+ The conversion of data from one type to another type is called type casting.
+
+ Widening:
+    It is the process of converting smaller types into a larger type.
+    It is automatically done.
+    Also known as implicit type casting.
+    There is no chance of loosing actual data as the destination is larger one.
+    byte -> short -> char -> int -> long -> float -> double
+
+ Narrowing:
+    It is the process of converting larger types into a smaller type.
+    Programmer should manually type cast.
+    Also known as explicit type casting.
+    There are chances of loosing actual data as the destination is smaller.
+    double -> float -> long -> int -> char -> short -> byte
+
+Wrapper class:
+
+ A class that wraps primitive data is called wrapper class.
+ Wrapper classes help a Java program be completely object-oriented. 
+ The primitive data types in java are not objects, by default. 
+ They need to be converted into objects using wrapper classes.
+ Generic classes only work with objects and don't support primitives.
+ Wrapper classes are useful for synchronization in multithreading. 
+ The synchronization process allows only one thread to use a shared resource at a time.
+ There are 8 wrapper classes for respective primitive types.
+ Byte, Short, Integer, Long, Float,Double,Character and Boolean.
+
+ 
+ Autoboxing:
+    Conversion of primitive into an object.
+
+ Unboxing:
+    Conversion of object into a primitive.
