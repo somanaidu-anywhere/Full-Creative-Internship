@@ -32,7 +32,7 @@ Class modifiers:
 
  Abstract:
 
- Abstraction is the process of hiding unnecessary details and show needed information.
+ Abstraction is the process of hiding unnecessary details and showing needed information.
  Abstract class is a class which is declared with Abstract keyword.
  An abstract class cannot be instantiated.
  Abstract class can have abstract and non abstract methods.
@@ -116,7 +116,7 @@ Primitive Data Types: and their default values.
     the default value is '\u0000'.
  boolean:
     boolean can store either true or false.
-    Its range can'nt be defined precisely.
+    Its size can'nt be defined precisely.
     the default value is false.
 
 Instance variables:
@@ -217,3 +217,49 @@ Wrapper class:
 
  Unboxing:
     Conversion of object into a primitive.
+
+Arrays:
+
+ Array is a collection of similar types of data.
+ The size of the array is fixed.
+ Array can be declared as shown below,
+   type[] variable;
+   type []variable;
+   type variable[];
+ Each element in an array can be accessed with an index.
+ index starts from 0.
+ Array can be initialized at declaration.
+   int[] arr = {1,2,3};
+ Array can be declared with new keyword.
+   int arr[] = new int[4];
+ Here array can hold maximum of 4 elements.
+ Multi-dimentional array:
+   A multi-dimentional array is an array of arrays.
+   It can be declared as follows
+      int[][] arr = {
+         {1,2,3},
+         {1,2,3},
+         {1,2,3}
+      }
+ Jagged array:
+   Jagged array is a multidimensional array where nested arrays are of different size.
+   ex:
+   int[][] arr = {
+      {1,2,3},
+      {1,2},
+      {1,2,3,4,5}
+   }
+
+Passing Varialbes to methods by Reference and value:
+ Java doesn't support pass by reference for primitive types.
+ Pass by value:
+   In this kind of method call, 
+   If the value of parameter changed in the method, it will not effect the variable value by which it is called.
+   Calling a method with primitive types is a pass by value.
+ Pass by reference:
+   Java does not supports pass by reference, but we can achieve it for the objects and arrays.
+   The objects are created in heap and a reference variable stores it's reference.
+   When a method is called with these objects then the references are copied and passed to the methods.
+   The changes of the parameter objects through reference in the method will reflect in the object by which it is called.
+   Because both variables are refering to same.
+   If reference is changed in method, then the changes will not effect original object.
