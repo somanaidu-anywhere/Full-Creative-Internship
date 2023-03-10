@@ -1,4 +1,4 @@
-package Month1_week1polymorphism;
+package Month1_week1.polymorphism;
 public class Car extends Vehicle{
 	public String steeringType;
 	public void start() {
