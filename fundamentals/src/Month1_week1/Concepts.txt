@@ -251,15 +251,110 @@ Arrays:
    }
 
 Passing Varialbes to methods by Reference and value:
- Java doesn't support pass by reference for primitive types.
+
+ Java doesn't support pass by reference.
  Pass by value:
    In this kind of method call, 
    If the value of parameter changed in the method, it will not effect the variable value by which it is called.
    Calling a method with primitive types is a pass by value.
  Pass by reference:
    Java does not supports pass by reference, but we can achieve it for the objects and arrays.
-   The objects are created in heap and a reference variable stores it's reference.
+   The objects are created in heap and a reference variable stores it's reference in the stack.
    When a method is called with these objects then the references are copied and passed to the methods.
-   The changes of the parameter objects through reference in the method will reflect in the object by which it is called.
+   The changes of the parameter objects in the method will reflect the roiginal object until it refers to the same object.
    Because both variables are refering to same.
    If reference is changed in method, then the changes will not effect original object.
+
+Inheritance:
+
+ Creating a new class from an existing class is an inheritance.
+ The existing class is known as super/parent/base class.
+ The class which is created from existing class is known as sub/child/derived class.
+ It is mainly used for two reasons
+   Code reuseability: The sub class aquires the members from super class.
+   Runtime Polymorphism: It can be achieved with method overriding.
+ We can access super class method(overriden) with super keyword from the sub class.
+ super() calls the super class constructor.
+ this() calls the same class constructor.
+ super() or this() must be in the first line of method or constructor.
+ Hence they can't be called together in the same method.
+ Types of inheritance:
+   Single inheritance:
+      One subclass extends one super class is a single inheritance.
+      A
+      |
+      B
+   Multilevel inheritance:
+      One sub class extends one super class and the sub class will act as a super class for another class.
+      A
+      |
+      B
+      |
+      C
+   Hierarchical inheritance:
+      More than one sub classes extends the same super class.
+           A
+        ---|---
+        |  |  |
+        B  C  D
+   Multiple inheritance:
+      One sub class extends from more than one super class.
+      It is not supported in java for classes.
+      It is supported by interfaces.
+        B  C  D
+        |  |  |
+        ---|---
+           A
+   Hybrid inheritance:
+      It is the combination of Multiple and and Hierarchical inheritance.
+      It is not supported in java for classes.
+      It is supported by interfaces.
+           A
+        ---|---
+        |     |
+        B     C
+        |     |
+        ---|---
+           D
+      
+Is-A relationship:
+      Java inheritance is called "Is-A" relationship.
+      The subclass is a type of super class.
+      Example: Car is a Vehicle.
+
+Has-A relationship:
+      The instance of one class exists in the instance of another class is called "Has-A" relationship.
+      It helps to achieve Multiple inheritance in java.
+      Has-A relationship can be implemented in two ways aggregation and composition.
+      Example: Bike has an Engine.
+
+Polymorphism:
+      One entity having many forms or same entity behaving different is a polymorphism.
+
+   Object Polymorphism:
+         A reference variable acting different for different objects.
+         It is achieved with inheritance.
+         When super class reference is used to refer to a child object, The reference variable behaves different for different sub class objects.
+
+   Method overriding:
+         A method acting different for different objects.
+         It is achieved with inheritance.
+         It is also called runtime polymorphism.
+         The method with same name and prototype(arguments and types of arguments) in sub class and in super class.
+         The method in the sub class hides the implementation of the super class.
+         Because inheritance is the process from generic to specific.
+         Methods declared as final or static can't be overriden.
+
+   Method overloading:
+         It is also called compiletime polymorphism.
+         The method with same name and with different prototypes in the same class is called method overloading.
+
+Encapsulation:
+   It is the bundling of fields and methods inside a single class.
+   It provides data hiding.
+   SO that we can improve security.
+   It makes our code cleaner and easy to read.
+   We can use access modifiers to achieve data hiding.
+   All related methods and class members should be binded in the same class.
+   All instance variables should be private.
+   Getters and setters can be included if we want to give read or write access.
