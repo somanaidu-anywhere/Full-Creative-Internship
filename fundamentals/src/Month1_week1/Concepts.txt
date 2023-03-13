@@ -56,6 +56,7 @@ Interfaces:
  One class can implement multiple interfaces.
  The class which implements an interface should implement all the unimplemented methods of the interface.
  All the methods in interface by default public. It can have private methods also.
+ The main difference from abstract class is that abstract classes can have constructors, state, and behavior.
 
 Methods with variable length argument:
 

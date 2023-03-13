@@ -6,4 +6,7 @@ public interface Shape {
 	{
 		System.out.println("It is a shape.");
 	}
+	 default void show() {
+		System.out.println("Hello");
+	}
 }
