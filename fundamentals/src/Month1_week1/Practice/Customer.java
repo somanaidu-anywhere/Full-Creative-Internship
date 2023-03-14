@@ -1,4 +1,4 @@
-package com.test.orders;
+package Month1_week1.Practice;
 
 public class Customer {
 	private double amount;

@@ -1,0 +1,118 @@
+Operators:
+    Operators are symbols that perform operations on variables and values.
+    There are different operators in java.
+
+    Arithmetic Operators:
+        Arithmetic operators are used to perform arithmetic operations on variables and data.
+        +  performs the addition operation
+        -  performs the subtraction operation
+        *  performs the multiplication operation
+        /  performs the division operation
+        %  performs the modulo operation. performs division and returns remainder.
+
+    Assingment Operators:
+        Assignment operators are used to assign values to variables.
+        = assigns the value of a variable or the data to the variable left of the operator.
+        += adds and assigns the value.
+        -= subtracts and assigns the value.
+        *= multiplies and assigns the value.
+        /= division and assigns the value.
+        %= performs modulo and assigns the value.
+
+    Relational Operators:
+        These operator checks the relationship between(compares two) two operands.
+        == returns true if both operands are equal.
+        != returns tru if both operands are not equal.
+        > returns true if L.H.S. operand is greater.
+        < returns true if R.H.S. operand if greater.
+        >= returns true if L.H.S. operand is greater or equal to another.
+        <= returns true if R.H.S. operand is greater or equal to another.
+
+    Logical Operators:
+        Logical operators are used to check whether an expression is true or false.
+        && returns true if both expressions are true.
+        || returns true if any of the expressions is true.
+        !  returns true if the expression is false.
+
+    Increament Operator:
+        The increament operator increases the value of the operand by 1.
+        post increament:
+            It increments the value before assigning it to another operand.
+        pre increament:
+            It increments the value after assigning it to another operand.
+    Decrement Operator:
+        The decrement operator decreases the value of the operand by 1.
+        post decrement:
+            It decrements the value before assigning it to another operand.
+        pre decrement:
+            It decrements the value after assigning it to another operand.
+
+    Ternary Operator:
+        One expression is executed if the condition is true otherwise another expression will be executed.
+        It shorthands the simple if-else statement.
+        variable = condition ? expression1 : expression2;
+
+Flow Control:
+    Simple if:
+        It is a simple statement like if-then.
+        a block of code is executed if the condition is true.
+        if(condition){
+            ....
+        }
+    if else:
+        It is a Conditional statement follows if-then and otherwise.
+        A block of code is executed if the condition is true.
+        Otherwise another block of code is executed.
+        if(condition){
+            .....
+        }
+        else{
+            .....
+        }
+    if else if else:
+        It follows a ladder method.
+        A block is executed if the condition is true.
+        The conditions are checked from top if block.
+        If any of the condition true then that particular code is executed.
+        If all the conditions are false else block will be executed.
+        if(condition1){
+            .....
+        }
+        else if(condition2)
+        {
+            .....
+        }
+        else{
+            .....
+        }
+        else{
+            .....
+        }
+
+    Switch statement:
+        The switch statement allows us to execute a block of code among many alternatives.
+        The expression is evaluated once and compared with the values of each case.
+        One case can be executed among all if the value matches with case.
+        Otherwise default will be executed.
+        The Java switch statement only works with byte, short, char, int, Enumerated types, String Class, Character, Byte, Short, and Integer.
+        
+    While:
+        while loop is used to run a specific code until a certain condition is true.
+        The expression is evaluted first and if the condition is true then only the code inside the loop will be executed.
+        This process continues till the condition becomes false.
+    do while:
+        The body of do-while loop is executed once before the condition is checked.
+        From second iteration onwards if the condition is true then only the code inside the loop will be executed.
+        This process continues till the condition becomes false.
+        while and do...while loops are generally used when the number of iterations is unknown.
+
+    for:
+        The for loop is used when the number of iterations is known.
+        for loop contains initialization, condition and update expression.
+        initialization executes only once and used to declare or initialize variables.
+        condition will be executed before every iteration.
+        update expression will be executed after every iteration to update the variables declare in initialization.
+        
+    for-each:
+        for-each loop is used to iterate through elements of arrays and collections.
+        for each has type, item, and collection/array.

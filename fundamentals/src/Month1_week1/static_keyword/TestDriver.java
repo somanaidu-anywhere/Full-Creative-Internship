@@ -19,6 +19,7 @@ public class TestDriver {
 		Bus.capacity = 9;
 		Bus.regNo = "AP 21 CF 7373";
 		Bus.show();
+		Student.Bus.show();
 	}
 	
 }

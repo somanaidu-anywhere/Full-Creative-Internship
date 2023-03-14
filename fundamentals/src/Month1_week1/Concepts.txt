@@ -242,6 +242,7 @@ Arrays:
          {1,2,3},
          {1,2,3}
       }
+      int[][] arr = new int[2][3];
  Jagged array:
    Jagged array is a multidimensional array where nested arrays are of different size.
    ex:
@@ -259,7 +260,7 @@ Passing Varialbes to methods by Reference and value:
    If the value of parameter changed in the method, it will not effect the variable value by which it is called.
    Calling a method with primitive types is a pass by value.
  Pass by reference:
-   Java does not supports pass by reference, but we can achieve it for the objects and arrays.
+   Java does not supports pass by reference, but we can achieve it for the objects and arrays until the reference is same.
    The objects are created in heap and a reference variable stores it's reference in the stack.
    When a method is called with these objects then the references are copied and passed to the methods.
    The changes of the parameter objects in the method will reflect the roiginal object until it refers to the same object.
@@ -326,7 +327,7 @@ Is-A relationship:
 Has-A relationship:
       The instance of one class exists in the instance of another class is called "Has-A" relationship.
       It helps to achieve Multiple inheritance in java.
-      Has-A relationship can be implemented in two ways aggregation and composition.
+      Has-A relationship can be implemented with aggregation.
       Example: Bike has an Engine.
 
 Polymorphism:
@@ -353,7 +354,7 @@ Polymorphism:
 Encapsulation:
    It is the bundling of fields and methods inside a single class.
    It provides data hiding.
-   SO that we can improve security.
+   So that we can improve security.
    It makes our code cleaner and easy to read.
    We can use access modifiers to achieve data hiding.
    All related methods and class members should be binded in the same class.
