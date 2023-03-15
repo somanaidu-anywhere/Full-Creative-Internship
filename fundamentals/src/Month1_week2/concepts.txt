@@ -40,6 +40,7 @@ Operators:
             It increments the value before assigning it to another operand.
         pre increament:
             It increments the value after assigning it to another operand.
+
     Decrement Operator:
         The decrement operator decreases the value of the operand by 1.
         post decrement:
@@ -69,7 +70,7 @@ Flow Control:
         else{
             .....
         }
-    if else if else:
+    if else ladder:
         It follows a ladder method.
         A block is executed if the condition is true.
         The conditions are checked from top if block.
@@ -82,7 +83,7 @@ Flow Control:
         {
             .....
         }
-        else{
+        else if(condition3){
             .....
         }
         else{
@@ -100,6 +101,7 @@ Flow Control:
         while loop is used to run a specific code until a certain condition is true.
         The expression is evaluted first and if the condition is true then only the code inside the loop will be executed.
         This process continues till the condition becomes false.
+
     do while:
         The body of do-while loop is executed once before the condition is checked.
         From second iteration onwards if the condition is true then only the code inside the loop will be executed.
@@ -116,3 +118,69 @@ Flow Control:
     for-each:
         for-each loop is used to iterate through elements of arrays and collections.
         for each has type, item, and collection/array.
+    
+    break:
+        break statement terminates the loop immediately and control goes to the next statement after the loop.
+        It is better to use with conditional statements.
+        The break statement is also used to terminate cases inside the switch statement.
+        If we are using break in nested loop, then break can terminate inner loop.
+
+    continue:
+        The continue statement skips or continues the current iteration of a loop.
+        Once continue statement executed control goes to the starting of the loop and condition is evaluated and continues the execution.
+        It is better to use with control statements.
+        It will leads to an infinite loop if the variable affects expression does not upgrades before the continue.
+
+Exceptions:
+    Exceptions are the events that occurs unexpectedly during execution.
+    These Exceptions terminate the execution abnormally.
+    The Throwable class is the super class for Error and Exception classes.
+    Errors are irrecoverable and can cause due to JVM running out of memory, memory leaks, stack overflow errors, library incompatibility.
+    We cannot handle errors.
+    Exceptions are two types Runtime exceptions and Compile time exceptions.
+    Runtime exceptions occur at runtime like ArithmeticException, IndexOutOfBoundsException etc.,
+    Checked Exceptions checked by the compiler at the compile time. These exceptions require catching or declaration of Exceptions.
+    Example:
+    IOException, ClassNotFoundException,SQLException etc., 
+
+Exception Handling:
+    Exceptions can be caught and handled.
+    Whenever exception occurs JVM creates an object for exception and throws it.
+    We can define our own exceptions by creating a class which extends Exception class.
+    Exceptions abnormally terminate the execution. So we need to catch them for normal execution/termination.
+    
+    try{
+        ....
+    }
+    catch(Exception e){
+        ....
+    }
+    finally{
+        ....
+    }
+
+    try:
+        try block contains the code where the exception is expected to occur.
+
+    catch:
+        catch block contains the code to execute when the specified exception is occured.
+        catch block cannot be written without a try.
+        catch block should define specific to generic exception in order to handle multiple exceptions.
+        if catch block for Exception is declared on the top the same catch block will be executed for all the exceptions.
+
+    finally:
+        if exceptoion is occured finally block executes after try and catch block.
+        otherwise it executes after try block.
+        finally block executes if exception was occured or not.
+        finally executes even if we don't catch the exception.
+        finally cannot be written without a try.
+        Generally used to write cleanup code.
+
+    throw:
+        throw keyword is used to explicitly throw an exception.
+        When we throw an exception respected catch block will be executed.
+        when we throw an exception it should be either catched or the method where it is called should declare the Exception with throws keyword.
+
+    throws:
+        throws keyword is used to declare the exceptions that might occur in the method.
+        It is used in the method declaration.

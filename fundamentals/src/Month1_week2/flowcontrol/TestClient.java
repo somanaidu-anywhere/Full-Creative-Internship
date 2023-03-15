@@ -62,5 +62,22 @@ public class TestClient {
 			sum+=item;
 		}
 		System.out.println(sum);
+		
+		a=10;
+		while(a<100) {
+			if(a==20) {
+				break;
+			}
+			System.out.print(a+++" ");
+		}
+		System.out.println();
+		a=10;
+		while(a<30) {
+			++a;
+			if(a==20) {
+				continue;
+			}
+			System.out.print(a+" ");
+		}
 	}
 }
