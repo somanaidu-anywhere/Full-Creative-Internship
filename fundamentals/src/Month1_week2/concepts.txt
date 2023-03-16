@@ -131,17 +131,35 @@ Flow Control:
         It is better to use with control statements.
         It will leads to an infinite loop if the variable affects expression does not upgrades before the continue.
 
-Exceptions:
-    Exceptions are the events that occurs unexpectedly during execution.
-    These Exceptions terminate the execution abnormally.
-    The Throwable class is the super class for Error and Exception classes.
+Exception Hierarchy:
+
+Throwable:
+    Throwable class is the subclass of Object and super class for Exception and Error.
+    Objects of Throwable or objects of it's subclasses can only thrown by JVM or with java throw keyword.
+    Argument of catch can only either Throwable or its subclass.
+
+Errors:
+    Errors are usually caused by serious problems that are outside the control of the program, such as running out of memory or a system crash.
     Errors are irrecoverable and can cause due to JVM running out of memory, memory leaks, stack overflow errors, library incompatibility.
-    We cannot handle errors.
-    Exceptions are two types Runtime exceptions and Compile time exceptions.
-    Runtime exceptions occur at runtime like ArithmeticException, IndexOutOfBoundsException etc.,
-    Checked Exceptions checked by the compiler at the compile time. These exceptions require catching or declaration of Exceptions.
+    We cannot handle Errors.
+
+Exceptions:
+    Exceptions are the events that occurs unexpectedly during the program execution.
+    These Exceptions terminate the execution abnormally.
+    We can handle Exceptions.
+
+    Exceptions are two types Checked exceptions and unchecked exceptions.
+    Checked Exceptions checked by the compiler at the compile time. 
+    It represents a predictable, erroneous situation that can occur.
+    These exceptions require catching or declaration of Exceptions with throws keyword.
     Example:
-    IOException, ClassNotFoundException,SQLException etc., 
+    IOException, ClassNotFoundException,SQLException,FileNotFoundException etc., 
+
+    Runtime exceptions occur at runtime.
+    An unchecked exception is a programming error.
+    Compiler can't anticipate logical errors that arise only at runtime.
+    Example:
+    ArithmeticException, IndexOutOfBoundsException, NullPointerException etc.,
 
 Exception Handling:
     Exceptions can be caught and handled.
@@ -184,3 +202,8 @@ Exception Handling:
     throws:
         throws keyword is used to declare the exceptions that might occur in the method.
         It is used in the method declaration.
+        It hands over the Exception to the method where it is called.
+    
+    Propagation of Uncaught Exceptions:
+        When an Exception occured propagation us the process controls the flow from top to bottom of the stack.
+        If the Exception is not caught it drops down to previous method until the Exception is caught or it drops to the bottom of the stack.
