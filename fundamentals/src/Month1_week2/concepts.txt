@@ -150,7 +150,7 @@ Exceptions:
 
     Exceptions are two types Checked exceptions and unchecked exceptions.
     Checked Exceptions checked by the compiler at the compile time. 
-    It represents a predictable, erroneous situation that can occur.
+    compiler represents a predictable, erroneous situation that can occur.
     These exceptions require catching or declaration of Exceptions with throws keyword.
     Example:
     IOException, ClassNotFoundException,SQLException,FileNotFoundException etc., 
@@ -207,3 +207,130 @@ Exception Handling:
     Propagation of Uncaught Exceptions:
         When an Exception occured propagation us the process controls the flow from top to bottom of the stack.
         If the Exception is not caught it drops down to previous method until the Exception is caught or it drops to the bottom of the stack.
+
+
+Strings:
+    String is a sequence of characters. It is class in java.
+    String class is immutable.
+    That means once we create an object we cannot change it.
+    Beacause of the security, synchronization and concurrency, caching, and class loading.
+    The string object can be created by two ways.
+    Using string literal, In this process the string object is created in java String pool which is in heap memory.
+    It returns the same object if it is already exists.Otherwise, it will create a new String object.
+    Using the new keyword, it always creates a new object in heap memory.
+
+String methods:
+    length()
+        returns the number of characters in the string.
+    charAt()
+        returns the character at specified index.
+    concat()
+        Concatenates or joins the string with another returns a new string.
+    contains()
+        returns true if the string specified charsequence. Otherwise returns false.
+    compareTo()
+        returns difference of respective characters from two strings.
+    compareToIgnoreCase()
+        returns difference of respective characters from two strings by ignoring case.
+    equals()
+        returns true if two strings contains same data.
+    equalsIgnoreCase(String another)
+        returns true if two strings contains same data irrespective of case.
+    indexOf()
+        returns index of the string where the specified character or substring presents.
+        returns -1 if not not present.
+        it can have from index value where search can start from.
+    lastIndexOf()
+        returns index of the string where the specified character or substring present from the last.
+        returns -1 if not not present.
+        it can have from index value where search can start from.
+    substring()
+        returns a string from specified start index to the specified last index-1.
+        if there is no last index goes till the end.
+    replace()
+        returns a string by replacing each old character/substring with new one.
+    replaceAll()
+        returns a string by replacing each substring which matches specified regex with new one.
+    replaceFirst()
+        returns new String by replacing first occured old substring with new one.
+    toLowerCase()
+        returns new string in lowecase format.
+    toUpperCase()
+        returns new string in uppercase format.
+    endsWith()
+        returns true if the string ends with specified substring.
+    startsWith()
+        returns true if the string starts with specified substring.
+    isEmpty()
+        returns true if length is 0.
+    toCharArray()
+        returns an array of characters from the string.
+    jon()
+        returns a string by joining vararg Strings with the delimeter.
+    trim()
+        returns a new string by removing leading or trailing spaces.
+    split()
+        returns a string array by splitting the string where specified regex is matched.
+
+StringBuffer:
+    StringBuffer objects are mutable.
+    We can change the data once we  create the StringBuffer object.
+    The StringBuffer does not overrides the equal().
+    All the public methods of StringBuffer are synchronized.
+    It means when one thread is executing a method, another thread cannot enter the method to execute.
+    This feature reduces the performance but mostly used in the security while working with multiple threads to prevent data inconsistancy.
+    It has the initial buffer capacity of 16.
+    we can increase the capacity manually with ensureCapacity().
+    The capacity grows by (old capacity * 2)+2 as length reaches capacity.
+    We have the following classes in StringBuffer.
+
+    capacity():
+        returns the capacity of StringBuffer.
+    ensureCapacity()
+        maintaince a minimum specified capacity of StringBuffer.
+    trimToSize()
+        removes the empty buffer space for storage by keeping tha capacity as same as length of StringBuffer.
+    append()
+        adds the specified char/int/long/float/double/boolean/object/string at the last.
+    insert()
+        inserts the specified char/int/long/float/double/boolean/object/string at the given index.
+    delete()
+        removes the subsequence from specified start index to end index-1.
+    deleteCharAt()
+        removes character at specified index.
+    setCharAt()
+        sets the character at specified index.
+    setLength()
+        sets the length to specified integer value.
+    reverse()
+        reverses the sequence of characters in the StringBuffer.
+    length()
+        returns the number of characters in the StringBuffer.
+    charAt()
+        returns the character at specified index.
+    indexOf()
+        returns the index where the specified character or substring presents.
+        returns -1 if not not present.
+        it can have from index value where search can start from.
+    lastIndexOf()
+        returns index of the string where the specified character or substring present from the last.
+        returns -1 if not not present.
+        it can have from index value where search can start from.
+    substring()
+        returns a string from specified start index to the specified last index-1.
+        if there is no last index goes till the end.
+    replace()
+        returns a string by replacing each old character/substring with new one.
+
+StringBuilder:
+    StringBuilder objects are mutable.
+    We can change the data once we  create the StringBuilder object.
+    The StringBuilder does not overrides the equal().
+    All the public methods of StringBuffer are non synchronized.
+    It means when one thread is executing a method, another thread can enter the method to execute.
+    This feature increases the performance1 as there is no need to wait while one thread is executing the method already.
+    But not recommended for the security while working with multiple threads. There may be data inconsistancy occured.
+    It has the initial capacity of 16.
+    we can increase the capacity manually with ensureCapacity().
+    The capacity grows by (old capacity * 2)+2 as length reaches capacity.
+    It has the same methods as the StringBuffer but these are non thread safe or non synchronized.

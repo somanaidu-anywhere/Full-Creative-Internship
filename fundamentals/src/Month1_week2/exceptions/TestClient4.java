@@ -23,7 +23,6 @@ public class TestClient4 {
 	private static void callC() {
 		System.out.println(5/0);
 	}
-	
 }
 
 /*
