@@ -75,7 +75,7 @@ Flow Control:
         A block is executed if the condition is true.
         The conditions are checked from top if block.
         If any of the condition true then that particular code is executed.
-        If all the conditions are false else block will be executed.
+        If all the conditions are false, else block will be executed.
         if(condition1){
             .....
         }
@@ -109,7 +109,7 @@ Flow Control:
         while and do...while loops are generally used when the number of iterations is unknown.
 
     for:
-        The for loop is used when the number of iterations is known.
+        The for loop is used when the number of iterations are known.
         for loop contains initialization, condition and update expression.
         initialization executes only once and used to declare or initialize variables.
         condition will be executed before every iteration.
@@ -117,7 +117,7 @@ Flow Control:
         
     for-each:
         for-each loop is used to iterate through elements of arrays and collections.
-        for each has type, item, and collection/array.
+        for-each has type, item, and collection/array.
     
     break:
         break statement terminates the loop immediately and control goes to the next statement after the loop.
@@ -141,7 +141,7 @@ Throwable:
 Errors:
     Errors are usually caused by serious problems that are outside the control of the program, such as running out of memory or a system crash.
     Errors are irrecoverable and can cause due to JVM running out of memory, memory leaks, stack overflow errors, library incompatibility.
-    We cannot handle Errors.
+    We cannot handle Errors because we are not sure that handling code executes or not.
 
 Exceptions:
     Exceptions are the events that occurs unexpectedly during the program execution.
@@ -187,7 +187,7 @@ Exception Handling:
         if catch block for Exception is declared on the top the same catch block will be executed for all the exceptions.
 
     finally:
-        if exceptoion is occured finally block executes after try and catch block.
+        if exception is occured finally block executes after try and catch block.
         otherwise it executes after try block.
         finally block executes if exception was occured or not.
         finally executes even if we don't catch the exception.
@@ -215,9 +215,10 @@ Strings:
     That means once we create an object we cannot change it.
     Beacause of the security, synchronization and concurrency, caching, and class loading.
     The string object can be created by two ways.
-    Using string literal, In this process the string object is created in java String pool which is in heap memory.
+    Using string literal, In this process the string object is created in java String Constant Pool which is in heap memory.
     It returns the same object if it is already exists.Otherwise, it will create a new String object.
-    Using the new keyword, it always creates a new object in heap memory.
+    Using the new keyword, it always creates a new object in heap memory and a new object in the string Constant Pool.
+    There will not be duplicate objects in the String Constant Pool rather many variables can refer to the same object.
 
 String methods:
     length()
@@ -242,7 +243,7 @@ String methods:
         it can have from index value where search can start from.
     lastIndexOf()
         returns index of the string where the specified character or substring present from the last.
-        returns -1 if not not present.
+        returns -1 if not present.
         it can have from index value where search can start from.
     substring()
         returns a string from specified start index to the specified last index-1.
@@ -275,7 +276,7 @@ String methods:
 StringBuffer:
     StringBuffer objects are mutable.
     We can change the data once we  create the StringBuffer object.
-    The StringBuffer does not overrides the equal().
+    The StringBuffer does not overrides the equals().
     All the public methods of StringBuffer are synchronized.
     It means when one thread is executing a method, another thread cannot enter the method to execute.
     This feature reduces the performance but mostly used in the security while working with multiple threads to prevent data inconsistancy.
@@ -289,7 +290,7 @@ StringBuffer:
     ensureCapacity()
         maintaince a minimum specified capacity of StringBuffer.
     trimToSize()
-        removes the empty buffer space for storage by keeping tha capacity as same as length of StringBuffer.
+        removes the empty buffer space for storage by keeping the capacity as same as length of StringBuffer.
     append()
         adds the specified char/int/long/float/double/boolean/object/string at the last.
     insert()
@@ -325,12 +326,47 @@ StringBuffer:
 StringBuilder:
     StringBuilder objects are mutable.
     We can change the data once we  create the StringBuilder object.
-    The StringBuilder does not overrides the equal().
-    All the public methods of StringBuffer are non synchronized.
+    The StringBuilder does not overrides the equals().
+    All methods of StringBuffer are non synchronized.
     It means when one thread is executing a method, another thread can enter the method to execute.
-    This feature increases the performance1 as there is no need to wait while one thread is executing the method already.
+    This feature increases the performance as there is no need to wait while one thread is executing the method already.
     But not recommended for the security while working with multiple threads. There may be data inconsistancy occured.
     It has the initial capacity of 16.
     we can increase the capacity manually with ensureCapacity().
     The capacity grows by (old capacity * 2)+2 as length reaches capacity.
     It has the same methods as the StringBuffer but these are non thread safe or non synchronized.
+
+Serialization:
+    The process of saving or writing the state of object to a file is called Serialization.
+    It is the process of converting a java supported object to a network supported or file supported object.
+    The class which is to be serialized has to implement Serializable interface.
+    The Serializable is a marker interface that is it has no methods to implement.
+    The Serialization process uses FileOutputStream, ObjectOutputStream classes.
+    The process of reading state of the object from a file is called Deserialization.
+    The Deserialization process uses FileInputStream, ObjectInputStream classes.
+    If we tryy to serialize a class which was not implemented Serializable interface then we will get NotSerializableException.
+    Serializable, FileInputStream,FileOutputStream,ObjectInputStream, ObjectOutputStream, NotSerializableException are belongs to java.io package.
+    We can Deserialize the objets in the same order how we have serialized objects.
+
+    transient keyword:
+        transient modifier is applicable for variables.
+        If we want to avoid Serialization to access original data of a variable we can use transient modifier.
+        In this case the default value is stored in the Serialization file.
+        It will leads to loss of information.
+
+    callback methods of Serialization:
+        there are two call back methods of Serialization.
+        void writeObject(ObjectOutputStream os) throws Exception
+        void readObject(ObjectInputStream is) throws Exception
+        the writeObject method will automatically executes when Serialization starts.
+        the readObject method will automatically executes when Deserialization starts.
+        we can use these two call back methods to store transient variable's data into another object by reading it.
+    
+    Externalization:
+        Serialization is used to fully serialize an object where as externalization is used to serialize a part of object.
+        Externalization can be achieved by the class by implementing Externalizable interface.
+        The Externalization interface contains two methods readExternal(ObjectInput in) throws IOException and writeExternal(ObjectOutput out) throws IOException.
+        The readExternal(ObjectInput in) throws IOException will automatically executes at the time of Serialization.
+        The writeExternal(ObjectOutput out) throws IOException will automatically executes at the time of De-Serialization.
+        The Deserialization process uses empty parameter constructor to create object.
+        If there is no such constructor RuntimeException InvaidClassException will occur.
