@@ -344,7 +344,7 @@ Serialization:
     The Serialization process uses FileOutputStream, ObjectOutputStream classes.
     The process of reading state of the object from a file is called Deserialization.
     The Deserialization process uses FileInputStream, ObjectInputStream classes.
-    If we tryy to serialize a class which was not implemented Serializable interface then we will get NotSerializableException.
+    If we try to serialize a class which was not implemented Serializable interface then we will get NotSerializableException.
     Serializable, FileInputStream,FileOutputStream,ObjectInputStream, ObjectOutputStream, NotSerializableException are belongs to java.io package.
     We can Deserialize the objets in the same order how we have serialized objects.
 
@@ -370,3 +370,73 @@ Serialization:
         The writeExternal(ObjectOutput out) throws IOException will automatically executes at the time of De-Serialization.
         The Deserialization process uses empty parameter constructor to create object.
         If there is no such constructor RuntimeException InvaidClassException will occur.
+
+Date class:
+    Date class in present in the java.util package.
+    It represents specific moment in time with millisecond presicion.
+    Many of the methods and constuctors of Date class are deprecated in java.
+    The time is of Coordinated universal time.
+    Its months are 0 based indexed that starts from 0 and ends to 11.
+    Its years start from 1900.
+    This class doesn't support time zone information.
+    This Date class is not recommended to use because many methods of this class are deprecated.
+    It has methods
+    before():
+        returns true if date is before the given date.
+    after()
+        returns true if date is after the given date.
+    compareTo()
+        returns true if both instances represent same time.
+        returns -1 if date is before given date.
+        returns 1 if date is after given date.
+
+Calendar class:
+    Calendar class is an abstract class in java, which is sub class of Object.
+    We cannot use constructor to create object rather we can use a static method getInstance().
+    It represents a moment in time and provides many Calendar fields.
+    The methods are
+    add()
+        adds or subtracts the specified amount of time to the given calendar field.
+    get()
+        returns value of specified Calendar field.
+    getTime()
+        returns Date object representing Calendar time.
+    getMinimum()
+        returns minimum value of the specified field.
+    getMaximum()
+        returns maximum value of the specified field.
+    getTimeInMillis()
+        returns time in milliseconds.
+    compareTo()
+        returns true if both instances represent same time.
+        returns -1 if date is before given date.
+        returns 1 if date is after given date.
+    before():
+        returns true if date is before the given date.
+    after()
+        returns true if date is after the given date.
+    set()
+        sets the value for the specified Calendar fields.
+
+DateFormat class:
+    DateFormat class is an abstract class.
+    SimpleDateFormat class is the concrete class of DateFormat.
+    These two class present in the java.text package.
+    Convetring a string into date is called formatting.
+    Converting date into string is called parsing.
+    It has parse(), format() and getInstance() and other get Instance methods such as getTimeInstance(),getDateInstance(), getDateTimeInstance(), getTimeZone etc.,
+
+TimeZone Class:
+    TimeZone class represents TimeZone.
+    It extends Object class and implements Serializable, Cloneable.
+    It has methods like 
+    setId() 
+        sets TimeZone to specified id of TimeZone.
+    getId()
+        returns id of TimeZone.
+    getDefault()
+        returns default Timezone based on time.
+    getDisplayName()
+        returns name of the Timezone.
+    getAvailableIds()
+        returns array of all the supported ids.
