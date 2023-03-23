@@ -147,7 +147,7 @@ Exceptions:
     Exceptions are the events that occurs unexpectedly during the program execution.
     These Exceptions terminate the execution abnormally.
     We can handle Exceptions.
-
+    
     Exceptions are two types Checked exceptions and unchecked exceptions.
     Checked Exceptions checked by the compiler at the compile time. 
     compiler represents a predictable, erroneous situation that can occur.
@@ -366,8 +366,8 @@ Serialization:
         Serialization is used to fully serialize an object where as externalization is used to serialize a part of object.
         Externalization can be achieved by the class by implementing Externalizable interface.
         The Externalization interface contains two methods readExternal(ObjectInput in) throws IOException and writeExternal(ObjectOutput out) throws IOException.
-        The readExternal(ObjectInput in) throws IOException will automatically executes at the time of Serialization.
-        The writeExternal(ObjectOutput out) throws IOException will automatically executes at the time of De-Serialization.
+        The writeExternal(ObjectInput in) throws IOException will automatically executes at the time of Serialization.
+        The readExternal(ObjectOutput out) throws IOException will automatically executes at the time of De-Serialization.
         The Deserialization process uses empty parameter constructor to create object.
         If there is no such constructor RuntimeException InvaidClassException will occur.
 
@@ -422,8 +422,8 @@ DateFormat class:
     DateFormat class is an abstract class.
     SimpleDateFormat class is the concrete class of DateFormat.
     These two class present in the java.text package.
-    Convetring a string into date is called formatting.
-    Converting date into string is called parsing.
+    Convetring a string into date is called parsing.
+    Converting date into string is called formatting.
     It has parse(), format() and getInstance() and other get Instance methods such as getTimeInstance(),getDateInstance(), getDateTimeInstance(), getTimeZone etc.,
 
 TimeZone Class:

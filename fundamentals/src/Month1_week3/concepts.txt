@@ -1,0 +1,123 @@
+Collection:
+    The representation of inividual objects as a single entity is called Collection.
+    Collection is an interface.
+    It is root interface Collection framework.
+    It defines methods which are applicable for any Collection object.
+    THere is no direct concreet class for Collection interface.
+    The common methods are 
+    add()
+        adds specied object to the collection.
+    addAll()
+        adds all the objects of collection to the current collection.
+    remove()
+        removes a specified object from the collection.
+    removeAll()
+        removes all the objects specified in the collection from the current collection.
+    retainAll()
+        retains or maintains specified collection objects only.
+    size()
+        returns the number of objects in the collection.
+    isEmpty()
+        returns true if the there is no object in the collection.
+    clear()
+        removes all the objects from the collection.
+    contains()
+        returns true if there is a specified object in the collection.
+    iterator()
+        returns iterator object for the collection.
+    
+List:
+    List is the interface which extends Collection.
+    List represents inividual objects as a single entity where duplicates are allowed and insertion order is preserved.
+    List uses indexes to differentiate duplicate objects.
+    The order is preserved by the usage of indexes.
+    We can insert null.
+    There are 3 concreet classes for list interface.
+    ArrayList, LinkedList and Vector.
+    There are following methods in the list interface.
+    add(int index, Object obj)
+        adds object at the specified index.
+    addAll(int index, Collection collection)
+        adds all the objects of specified collection at the specified index.
+    containsAll(Collection collection)
+        returns true if list contains all the specified collection of objects.
+    get(int index)
+        returns the object stored in specified index.
+    remove(int index)
+        removes the object at specified index and retuns the object.
+    indexOf(Object obj)
+        returns the first index of the specified object.
+    lastIndexOf(Object obj)
+        returns last index of the specified Object.
+    listIterator()
+        returns object of listIterator() which is specific to enable the access in the both directions.
+
+
+    ArrayList:
+        ArrayList can store duplicate objects and the insertion order is preserved.
+        ArrayList uses growable array data structure.
+        It implements RandomAccess interface, We can access an object randomly from specified index with same speed.
+        ArrayList is recommended to use when there is a requirement of more retrieval operations.
+        It is not recommended to use where frequent operations are insertions and deletions.
+        ArrayList methods are non synchronized, that is they are not thread safe and provides high performance.
+        we can get synchronized version of ArrayList by using static method synchronizedList() of Collections class.
+        THe default capacity is 10, when ArrayList is created.
+        It grows as the number of objects stored are increased.
+        capacity = old_capacity*3/2+1
+
+    LinkedList:
+        LinkedList can store duplicate objects and the insertion order is preserved.
+        LinkedList uses double linked list data structure.
+        It does not implements RandomAccess interface.
+        It is recommended to use when insertions or deletions are frequent operations.
+        Not recommended to use when frequent operations are retrieval.
+        The methods of LinkedList helps to implement stack and queue.
+        addFirst(Object obj)
+            adds object at first.
+        addLast(Object obj)
+            adds at last.
+        removeFirst()
+            removes first object.
+        removeLast()
+            removes last object.
+        getFirst()
+            returns first object.
+        getLast()
+            returns last object.
+    Vector:
+        Vector is the legacy class.
+        It internally uses growable array data structure.
+        It implements RandomAccess interface, The performance is high for retrieval operations.
+        Most of the methods are synchronized. When one thread is executing a method another thread will not enter that method.
+        Hence performance reduces when working with multiple threads, one has to wait for another thread.
+        It provides more security when working with mulple threads as it is thread safe.
+        The default capacity is 10, It grows as number of objects increases.
+        capacity = old_capacity*2
+        addElement(Object obj)
+            This methods adds an Object at the last.
+        removeElement(Object object)
+            removes specified object from the vector.
+        removeAllElements()
+            removes all objects from vector.
+        elementAt(int index)
+            returns object at specified index.
+        firstElement()
+            returns first object of the vector.
+        lastElement()
+            returns last object of the vector.
+        capacity()
+            returns capacity of the vector.
+        
+    Stack:
+        Stack is the child class of Vector.
+        It is a legacy class.
+        It is specially designed for Last in first out order.
+        push(Object obj)
+            adds the object to the stack.
+        pop()
+            removes the top object from the stack.
+        peak()
+            returns top Object from the stack.
+        search(Object object)
+            returns index of the specified Object.
+            If objcet is not available returns -1.

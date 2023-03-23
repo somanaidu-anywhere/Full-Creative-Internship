@@ -1,6 +1,7 @@
 package Month1_week2.dates;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class TestClientCalender {
 	public static void main(String[] args) {
@@ -12,7 +13,6 @@ public class TestClientCalender {
 		System.out.println(calendar.getTimeZone().getDisplayName());
 		System.out.println(calendar.getTimeZone().getID());
 		calendar.set(Calendar.MONTH, Calendar.OCTOBER);
-		System.out.println(calendar.get(Calendar.MONDAY));
 		calendar.add(Calendar.MONTH, 2);
 		System.out.println(calendar.get(Calendar.MONTH));
 		Calendar cal = Calendar.getInstance();
