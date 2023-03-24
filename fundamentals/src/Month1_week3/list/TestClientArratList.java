@@ -48,7 +48,6 @@ public class TestClientArratList {
 		}
 		System.out.println(arrayList);
 		ListIterator lit = arrayList.listIterator();
-		System.out.println("---------"+lit.hasPrevious());
 		while(lit.hasNext()) {
 			int i = (int) lit.next();
 			if(i==3)

@@ -121,3 +121,33 @@ List:
         search(Object object)
             returns index of the specified Object.
             If objcet is not available returns -1.
+
+Set:
+    Set is the child interface of Collection.
+    If we want to represent a collection where duplicates are allowed and insertion order is not preserved, then we can use Set.
+    Set interface does not contain any extra methods.
+    There is only one direct concreet class HashSet and other Concreet classes of SortedSet,NavigableHashSet is TreeSet.
+
+    HashSet:
+        HashSet implements Set interface.
+        The underlying data structure is Hash Table.
+        The insertion order is not preserved.
+        Insertion is done by using Hash functions.
+        It does not implements RandomAccess.
+        It does not allows duplicate objects.
+        It allows null insertion.
+        It allows heterogeneous objects.
+        If we try to insert duplicates we wont get exception, add() simply returns false.
+        Recommended to use if frequent operation is search.
+        Its initial capacity is 16 and load factor is 0.75.
+        Capacity will be doubled when size reaches capacity*load factor.
+
+    TreeSet:
+        It implements NavigableSet interface.
+        The underlying data structure is balanced tree.
+        Insertion order is not preserved but objects will be stored by using sorted order.
+        duplicates are not allowed.
+        heterogeneous objects are not allowed.
+        We should insert homogeneous and comparable objects, otherwise we will get ClassCastException.
+        Null insertion is not possible, if we insert null we will get NullPointerException.
+        We can pass our own comparator object or implement Comparable to the constructor to change the sorting order.
