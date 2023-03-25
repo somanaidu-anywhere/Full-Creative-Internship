@@ -151,3 +151,58 @@ Set:
         We should insert homogeneous and comparable objects, otherwise we will get ClassCastException.
         Null insertion is not possible, if we insert null we will get NullPointerException.
         We can pass our own comparator object or implement Comparable to the constructor to change the sorting order.
+
+Map:
+    Map is not a child interface of Collection.
+    If we want to Represent a Group of Objects as Key and Value pairs then we can use Map.
+    Both Keys and Values are Objects. 
+    Duplicate Keys are not allowed.
+    Duplicate Values can be allowed.
+    Methods are:
+    put(Object key, Object value):
+        adds the key and value pair to the map.
+    putAll(Map m):
+        adds all the key-value pairs to the map.
+    get(Object key):
+        returns the value for the key.
+    containsKey(Object key):
+        returns true if map contains key.
+    containsValue(Object value):
+        returns true if map contains value.
+    isEmpty():
+        returns true if map has no key and values.
+    clear():
+        removes all the key and values.
+    remove(Object key)
+        removes specified key and value.
+    keySet():
+        returns a set of keys.
+    values():
+        returns a collection of values.
+    
+    HashMap:
+        The Underlying Data Structure is Hashtable.
+        Heterogeneous Objects are allowed for Both Keys and Values.
+        Insertion Order is not preserved and it is based on hash code of the keys.
+        null Insertion is allowed for Key (Only Once) and allowed for Values for any number of times.
+        By Default HashMap is Non- Synchronized.
+        we can get Synchronized HashMap by using synchronizedMap() of Collections Class.
+        Default Initial Capacity 16.
+        Default Fill Ratio is 0.75.
+
+    LinkedHashMap:
+        It is the child class of HashMap.
+        Underlying data structure is HashTable and LinkedList.
+        Insertion order is preserved.
+        It is same us HashMap for other features.
+
+    TreeMap:
+        The Underlying Data Structure is Red-Black Tree.
+        Duplicate Keys are Not Allowed.
+        But Values can be Duplicated.
+        Insertion Order is Not Preserved and it is Based on Some Sorting Order of Keys.
+        If we are depending on Default Natural Sorting Order then the Keys should be Homogeneous and Comparable.
+        Otherwise we will get Runtime Exception called ClassCastException.
+        If we defining Our Own Sorting by Comparator then Keys can be Heterogeneous and Non Comparable.
+        Values can be Heterogeneous and Non-Comparable.
+        null key cannot be allowed.

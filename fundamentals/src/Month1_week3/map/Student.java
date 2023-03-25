@@ -1,4 +1,4 @@
-package Month1_week3.set;
+package Month1_week3.map;
 
 import java.util.Objects;
 
@@ -61,13 +61,13 @@ public class Student implements Comparable {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("\n[");
+		builder.append("[");
 		builder.append(id);
 		builder.append("\t");
 		builder.append(name);
 		builder.append("\t");
 		builder.append(rank);
-		builder.append("]");
+		builder.append("]\n");
 		return builder.toString();
 	}
 }
