@@ -1,9 +1,9 @@
 Collection:
     The representation of inividual objects as a single entity is called Collection.
     Collection is an interface.
-    It is root interface Collection framework.
+    It is root interface of Collection framework.
     It defines methods which are applicable for any Collection object.
-    THere is no direct concreet class for Collection interface.
+    There is no direct concreet class for Collection interface.
     The common methods are 
     add()
         adds specied object to the collection.
@@ -149,7 +149,7 @@ Set:
         duplicates are not allowed.
         heterogeneous objects are not allowed.
         We should insert homogeneous and comparable objects, otherwise we will get ClassCastException.
-        Null insertion is not possible, if we insert null we will get NullPointerException.
+        Null insertion is not possible, if we insert null, we will get NullPointerException.
         We can pass our own comparator object or implement Comparable to the constructor to change the sorting order.
 
 Map:
@@ -206,3 +206,19 @@ Map:
         If we defining Our Own Sorting by Comparator then Keys can be Heterogeneous and Non Comparable.
         Values can be Heterogeneous and Non-Comparable.
         null key cannot be allowed.
+
+Generics:
+    Generics provides type safety and resolves ttype casting problems.
+    The parameter type we can use any class or interface name but not primitive value.
+    Otherwise we will get compile time error.
+     We can declare the type parameter either at class level or method level.
+    The naming convention is to use T for type parameter.
+    We can use a combination of type parameters like <K,V>.
+    We can bound the range of objects by using extends keyword.
+    <T extends Student> Here the objects of subclasses of Student only accepted.
+    <T extends Runnable> Here the objects of classes which implements Runnable only accepted.
+    We can also have type parameter which implements multiple interfaces and extends a Class.
+    such as <T extends Number&Comparable&Runnable>
+    <?> allows only read operation and null insertion.
+    <? extends X> allows only read operations and null insertions but can be of X type or its sub class type.
+    <? super X> allows to read and write to X type and its super class type and write operations to objects of type X or null.

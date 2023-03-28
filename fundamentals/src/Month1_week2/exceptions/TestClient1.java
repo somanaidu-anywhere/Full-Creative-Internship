@@ -8,6 +8,7 @@ public class TestClient1 {
 		try {
 			System.out.println(b/a);
 		}
+
 		catch(ArithmeticException ae) {
 			System.out.println(" / by zero");
 		}

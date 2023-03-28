@@ -146,7 +146,7 @@ static variable:
  It reduces memory by sharing same variable for its objects.
 
 static method:
- A static method can be called without cretaing an instance.
+ A static method can be called without creataing an instance.
  These methods have same implementation for all its objects.
  A static method can only work with static data (variables).
 
@@ -252,7 +252,7 @@ Arrays:
       {1,2,3,4,5}
    }
 
-Passing Varialbes to methods by Reference and value:
+Passing Variables to methods by Reference and value:
 
  Java doesn't support pass by reference.
  Pass by value:
