@@ -222,3 +222,37 @@ Generics:
     <?> allows only read operation and null insertion.
     <? extends X> allows only read operations and null insertions but can be of X type or its sub class type.
     <? super X> allows to read and write to X type and its super class type and write operations to objects of type X or null.
+
+Inner classes:
+    If we want an existing of one instance exists in the another instance we can use inner classes.
+    It achieves Has-A relationship.
+    There are 4 types of inner classes based on the purpose and position of declaration.
+        1. Normal or Regular inner classes
+        2. Method Local inner classes
+        3. Anonymous inner classes
+        4. Static nested classes.
+    Regular inner classes:
+        Regular inner classes are declared in the another class without a static keyword.
+        These inner classes have access to static and non-static, private, non-private fields of Outer classes.
+        We can't declare static static fields in this kind of inner classes.
+        Inside an inner class this keyword refers to the inner class member.
+        If want to ccess outer class member with this keyword, we can access by using outer class name.this.variable.
+        These king of inner classes can have the modifiers like private, protected,abstract, final, strictfp.
+        An inner class can have another inner class.
+    Method local inner classes:
+        When the scope of a class is within a method , we can use method local inner classes.
+        We can access both static and non static members of outer class directly.
+        final, static local variables can directly accessed.
+        We cannot declare static members inside method local inner classes.
+        Method local inner classes can allow final,abstract, strictfp.
+    Anonymous inner classes:
+        Inner class without a name is called Anonymous inner classes.
+        Anonymous inner classes just for instant use.
+        There are 3 types of anonymous inner classes 
+            1. Anonymous inner class that extends a class.
+            2. Anonymous inner class that implements an interface.
+            3. Anonymous inner class that defined inside method arguments.
+        Inside Anonymous inner classes we can take or declare new methods
+        But outside of anonymous inner classes we can't call these methods directly.
+    Static inner classes:
+         inner classes with static modifier are static nested classes
